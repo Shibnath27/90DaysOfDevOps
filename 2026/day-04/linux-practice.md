@@ -7,6 +7,8 @@
 ```bash
 ps aux | head
 ```
+**Output:**
+<img width="1150" height="201" alt="image" src="https://github.com/user-attachments/assets/5e5b9ea1-f37b-4d59-b6e9-3ea45e12caab" />
 
 * Shows currently running processes with CPU and memory usage.
 
@@ -15,6 +17,8 @@ ps aux | head
 ```bash
 top
 ```
+**Output:**
+<img width="1130" height="552" alt="image" src="https://github.com/user-attachments/assets/0f8eabd8-cb48-4a59-b461-57cbc2b435bb" />
 
 * Used to identify high CPU or memory-consuming processes.
 
@@ -23,6 +27,8 @@ top
 ```bash
 pgrep sshd
 ```
+**Output:**
+<img width="398" height="90" alt="image" src="https://github.com/user-attachments/assets/e8a095f9-2b8d-46ac-a58b-694726a5f461" />
 
 * Returns PID of the SSH service if running.
 
@@ -35,6 +41,8 @@ pgrep sshd
 ```bash
 systemctl status sshd
 ```
+**Output:**
+<img width="968" height="381" alt="image" src="https://github.com/user-attachments/assets/9c096d2b-4653-489e-b0e9-5b7bb2d75987" />
 
 * Confirms whether SSH service is active and running.
 
@@ -43,6 +51,9 @@ systemctl status sshd
 ```bash
 systemctl list-units --type=service --state=running
 ```
+**Output:**
+
+<img width="725" height="361" alt="image" src="https://github.com/user-attachments/assets/3ef6a85f-8166-47d1-9cc2-c917ebe57f29" />
 
 * Lists all active systemd services.
 
@@ -55,6 +66,8 @@ systemctl list-units --type=service --state=running
 ```bash
 journalctl -u sshd --no-pager | tail -n 20
 ```
+**Output:**
+<img width="986" height="214" alt="image" src="https://github.com/user-attachments/assets/b49e6565-d29b-4ff4-a188-e72030be81f1" />
 
 * Shows recent SSH-related log entries.
 
@@ -63,6 +76,8 @@ journalctl -u sshd --no-pager | tail -n 20
 ```bash
 journalctl -xe
 ```
+**Output:**
+<img width="1140" height="519" alt="image" src="https://github.com/user-attachments/assets/9a320bd2-e480-44c8-888e-b621daf445a8" />
 
 * Displays recent system errors and warnings.
 
