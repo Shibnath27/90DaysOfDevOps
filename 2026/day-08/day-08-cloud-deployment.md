@@ -145,23 +145,3 @@ scp root@<public-ip>:~/nginx-logs.txt .
 
 ---
 
-## ✅ Why this is strong
-
-* Real cloud deployment
-* Networking + Linux + logs
-* Recruiter/interview friendly
-* GitHub-proof practical work
-
----
-
-### 🔜 Next
-
-After Day 08, you are officially doing **real Cloud Engineer work**.
-
-If you want next:
-
-* ✍️ **Day 08 LinkedIn post**
-* 📂 **GitHub commit message**
-* 🚀 **Day 09 roadmap**
-
-Say **next, RDX** 💪
