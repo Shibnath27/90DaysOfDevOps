@@ -36,6 +36,7 @@ ssh root@<public-ip>
 ```bash
 sudo apt update && sudo apt upgrade -y
 ```
+<img width="1120" height="610" alt="image" src="https://github.com/user-attachments/assets/bfc98094-9ec6-4c7d-b761-91a159ea85d3" />
 
 ### Step 2: Install Docker
 
@@ -44,12 +45,14 @@ sudo apt install docker.io -y
 sudo systemctl start docker
 sudo systemctl enable docker
 ```
+<img width="1144" height="417" alt="image" src="https://github.com/user-attachments/assets/3888cf68-6ba8-434a-9e92-bf506be2d165" />
 
 Verify:
 
 ```bash
 docker --version
 ```
+<img width="512" height="58" alt="image" src="https://github.com/user-attachments/assets/b320351a-ccb5-4311-b99c-0eb964289128" />
 
 ### Step 3: Install Nginx
 
@@ -64,6 +67,7 @@ Verify:
 ```bash
 systemctl status nginx
 ```
+<img width="1066" height="323" alt="image" src="https://github.com/user-attachments/assets/393c5b52-73a6-4538-a5e6-37b39b4750ee" />
 
 ---
 
@@ -77,6 +81,8 @@ http://<your-public-ip>
 ```
 
 ✅ You should see **Nginx Welcome Page**
+
+<img width="1355" height="373" alt="image" src="https://github.com/user-attachments/assets/dfab4f6d-84a9-4b93-a81b-da83408e9ebd" />
 
 📸 **Screenshot:** Browser showing Nginx page
 
@@ -95,12 +101,14 @@ sudo tail -n 50 /var/log/nginx/access.log
 ```bash
 sudo cp /var/log/nginx/access.log ~/nginx-logs.txt
 ```
+<img width="1146" height="95" alt="image" src="https://github.com/user-attachments/assets/f848ac41-eb9b-4639-b7d4-e8e228325c69" />
 
 Verify:
 
 ```bash
-cat ~/nginx-logs.txt
+sudo cat ~/nginx-logs.txt
 ```
+<img width="1142" height="99" alt="image" src="https://github.com/user-attachments/assets/f6047cc4-5bd3-408f-bcf6-90ba75383003" />
 
 📸 **Screenshot:** Log file content
 
@@ -115,6 +123,7 @@ scp -i your-key.pem ubuntu@<public-ip>:~/nginx-logs.txt .
 # Utho
 scp root@<public-ip>:~/nginx-logs.txt .
 ```
+<img width="1151" height="172" alt="image" src="https://github.com/user-attachments/assets/450c68bd-318b-4732-ba1c-5937afcc11f3" />
 
 ---
 
