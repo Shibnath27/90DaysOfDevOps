@@ -13,6 +13,7 @@ sudo useradd -m tokyo
 sudo useradd -m berlin
 sudo useradd -m professor
 ```
+<img width="604" height="77" alt="image" src="https://github.com/user-attachments/assets/78009370-fde5-4051-aeeb-ee07a6e93e3f" />
 
 ### Set passwords
 
@@ -28,6 +29,7 @@ sudo passwd professor
 cat /etc/passwd | grep -E "tokyo|berlin|professor"
 ls -l /home/
 ```
+<img width="629" height="353" alt="image" src="https://github.com/user-attachments/assets/c63f835e-6bbf-4f77-ae73-8bfbd881b014" />
 
 ---
 
@@ -43,6 +45,7 @@ sudo groupadd admins
 ```bash
 cat /etc/group | grep -E "developers|admins"
 ```
+<img width="598" height="69" alt="image" src="https://github.com/user-attachments/assets/d4cc054e-493d-4c2e-9efb-ae5f27cedad2" />
 
 ---
 
@@ -61,6 +64,7 @@ groups tokyo
 groups berlin
 groups professor
 ```
+<img width="564" height="107" alt="image" src="https://github.com/user-attachments/assets/225dae91-5550-4672-be64-dc49bc139afb" />
 
 ---
 
@@ -89,6 +93,8 @@ sudo chmod 775 /opt/dev-project
 ```bash
 ls -ld /opt/dev-project
 ```
+<img width="524" height="48" alt="image" src="https://github.com/user-attachments/assets/35db76c7-38b5-4380-955b-e99e0ced5149" />
+
 
 ### Test as users
 
@@ -97,6 +103,7 @@ sudo -u tokyo touch /opt/dev-project/tokyo.txt
 sudo -u berlin touch /opt/dev-project/berlin.txt
 ls -l /opt/dev-project
 ```
+<img width="629" height="111" alt="image" src="https://github.com/user-attachments/assets/d6935555-2ae7-4961-ae81-3da0929bad1f" />
 
 ✅ Both users should be able to create files.
 
@@ -133,6 +140,7 @@ sudo chmod 775 /opt/team-workspace
 sudo -u nairobi touch /opt/team-workspace/nairobi.txt
 ls -l /opt/team-workspace
 ```
+<img width="750" height="80" alt="image" src="https://github.com/user-attachments/assets/5d96bc38-5281-4026-9721-55ae50ee8055" />
 
 ---
 
