@@ -41,6 +41,7 @@ ESC :wq
 ```bash
 ls -l devops.txt notes.txt script.sh
 ```
+<img width="920" height="86" alt="image" src="https://github.com/user-attachments/assets/30b87a27-42a4-44ed-a684-e28e9275a297" />
 
 ---
 
@@ -49,12 +50,16 @@ ls -l devops.txt notes.txt script.sh
 ```bash
 cat notes.txt
 ```
+<img width="419" height="55" alt="image" src="https://github.com/user-attachments/assets/92bfd2a1-c255-4609-a3ad-3552bb99efd6" />
+
 
 ### Open script in read-only mode
 
 ```bash
 vim -R script.sh
 ```
+<img width="1143" height="610" alt="image" src="https://github.com/user-attachments/assets/65bcf325-39ae-495e-99de-48f3dbca9a72" />
+
 
 ### View /etc/passwd
 
@@ -62,6 +67,7 @@ vim -R script.sh
 head -n 5 /etc/passwd
 tail -n 5 /etc/passwd
 ```
+<img width="592" height="214" alt="image" src="https://github.com/user-attachments/assets/e1bc6013-c009-4143-9ec6-c194e7c39e9d" />
 
 ---
 
@@ -73,18 +79,16 @@ Check permissions:
 ls -l devops.txt notes.txt script.sh
 ```
 
-Example output:
+ output:
 
-```text
--rw-r--r--  devops.txt
--rw-r--r--  notes.txt
--rw-r--r--  script.sh
+<img width="542" height="86" alt="image" src="https://github.com/user-attachments/assets/e14f2cc8-5d32-43c9-ad60-d39dee33c809" />
+
 ```
-
+```
 Meaning:
 
 * **Owner**: read + write
-* **Group**: read
+* **Group**: read + write
 * **Others**: read
 * ❌ No execute permission yet
 
@@ -118,6 +122,7 @@ Verify:
 ```bash
 ls -l devops.txt
 ```
+<img width="502" height="66" alt="image" src="https://github.com/user-attachments/assets/fc41de69-cd52-4985-87b5-db99142a6d93" />
 
 ---
 
@@ -142,6 +147,7 @@ mkdir project
 chmod 755 project
 ls -ld project
 ```
+<img width="533" height="54" alt="image" src="https://github.com/user-attachments/assets/f16ccaae-acad-4749-b1e2-5b632e74fa33" />
 
 ---
 
@@ -210,4 +216,4 @@ Permission denied
 ```
 
 ---
-t, RDX** 💪
+
