@@ -46,25 +46,29 @@ df -h
 
 📸 Screenshot this output
 
+<img width="847" height="491" alt="image" src="https://github.com/user-attachments/assets/62e76316-ca56-45e3-90d4-a4e67bc81c3b" />
+
 ---
 
 ## 🔹 Task 2: Create Physical Volume (PV)
 
 ```bash
-pvcreate /dev/loop0
+pvcreate /dev/nvme1n1 /dev/nvme2n1
 pvs
 ```
 
-✔ Now `/dev/loop0` is a Physical Volume
+✔ Now `pvcreate /dev/nvme1n1 /dev/nvme2n1` is a Physical Volume
 
 📸 Screenshot `pvs`
+
+<img width="488" height="128" alt="image" src="https://github.com/user-attachments/assets/e4192eab-ffe4-4d8e-a30f-f2853ef04616" />
 
 ---
 
 ## 🔹 Task 3: Create Volume Group (VG)
 
 ```bash
-vgcreate devops-vg /dev/loop0
+vgcreate devops-vg /dev/nvme1n1 /dev/nvme2n1
 vgs
 ```
 
@@ -72,12 +76,14 @@ vgs
 
 📸 Screenshot `vgs`
 
+<img width="576" height="102" alt="image" src="https://github.com/user-attachments/assets/dc7b352c-ba40-43d6-a825-e70e4d7f43b2" />
+
 ---
 
 ## 🔹 Task 4: Create Logical Volume (LV)
 
 ```bash
-lvcreate -L 500M -n app-data devops-vg
+lvcreate -L 10G -n app-data devops-vg
 lvs
 ```
 
@@ -85,6 +91,8 @@ lvs
 `/dev/devops-vg/app-data`
 
 📸 Screenshot `lvs`
+
+<img width="741" height="66" alt="image" src="https://github.com/user-attachments/assets/1506fc3a-7ec7-4158-b3b7-7e593cf72dac" />
 
 ---
 
@@ -95,6 +103,9 @@ lvs
 ```bash
 mkfs.ext4 /dev/devops-vg/app-data
 ```
+
+<img width="614" height="201" alt="image" src="https://github.com/user-attachments/assets/0aeb8829-7754-4587-8368-68e66ed97d32" />
+
 
 ### Mount
 
@@ -108,6 +119,8 @@ df -h /mnt/app-data
 
 📸 Screenshot `df -h /mnt/app-data`
 
+<img width="595" height="49" alt="image" src="https://github.com/user-attachments/assets/3ce94052-8e36-452e-8994-e024c9f3ac0e" />
+
 ---
 
 ## 🔹 Task 6: Extend the Volume
@@ -115,7 +128,7 @@ df -h /mnt/app-data
 ### Extend Logical Volume
 
 ```bash
-lvextend -L +200M /dev/devops-vg/app-data
+lvextend -L +5G /dev/devops-vg/app-data
 ```
 
 ### Resize filesystem
@@ -133,6 +146,8 @@ df -h /mnt/app-data
 ✔ Storage increased without unmounting
 
 📸 Screenshot final size
+
+<img width="768" height="158" alt="image" src="https://github.com/user-attachments/assets/0c3110da-0263-4684-887c-08ee484b120d" />
 
 ---
 
