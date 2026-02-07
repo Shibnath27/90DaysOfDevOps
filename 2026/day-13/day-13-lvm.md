@@ -169,7 +169,7 @@ df -h /mnt/app-data
 - df -h
 
 ## Storage Setup
-- Physical Volume: /dev/loop0
+- Physical Volume: /dev/nvme1n1 /dev/nvme2n1
 - Volume Group: devops-vg
 - Logical Volume: app-data
 - Mount Point: /mnt/app-data
