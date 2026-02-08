@@ -144,5 +144,4 @@ nc -zv localhost 22
 1. Check service status (`systemctl status`)
 2. Check logs (`journalctl -u <service>`)
 
-```
 
