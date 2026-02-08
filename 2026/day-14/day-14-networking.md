@@ -30,13 +30,15 @@
   - Application (HTTP) → Transport (TCP) → Network (IP)
 
 ---
-
+````
 ## Hands-on Networking Checks
 
 ### Identity
 ```bash
 hostname -I
 ````
+<img width="419" height="71" alt="image" src="https://github.com/user-attachments/assets/cffdab83-d32c-43e5-9b25-60f92db8b699" />
+
 
 **Observation:** Shows the IP address assigned to the server.
 
@@ -47,6 +49,8 @@ hostname -I
 ```bash
 ping google.com -c 4
 ```
+<img width="734" height="173" alt="image" src="https://github.com/user-attachments/assets/9c49c5af-82a9-44ce-9aee-bd16791397c6" />
+
 
 **Observation:** Packets received with low latency, no packet loss.
 
@@ -57,6 +61,8 @@ ping google.com -c 4
 ```bash
 traceroute google.com
 ```
+<img width="1136" height="170" alt="image" src="https://github.com/user-attachments/assets/9e480df7-0f67-4e37-a32b-5946a02a9e26" />
+
 
 **Observation:** Shows intermediate hops; some hops may timeout due to firewall rules.
 
@@ -67,6 +73,8 @@ traceroute google.com
 ```bash
 ss -tulpn
 ```
+<img width="1117" height="259" alt="image" src="https://github.com/user-attachments/assets/8bcf8ce7-62ac-417a-aa71-39ac2e5e5882" />
+
 
 **Observation:** SSH service is listening on port 22.
 
@@ -77,6 +85,8 @@ ss -tulpn
 ```bash
 dig google.com
 ```
+<img width="574" height="343" alt="image" src="https://github.com/user-attachments/assets/c2d31bc3-bad7-4862-acd1-4eae46ee2a48" />
+
 
 **Observation:** Domain resolves to multiple IP addresses (load balancing).
 
@@ -87,6 +97,7 @@ dig google.com
 ```bash
 curl -I https://google.com
 ```
+<img width="1145" height="272" alt="image" src="https://github.com/user-attachments/assets/b1633652-356a-4929-9c22-0739cfc9f17a" />
 
 **Observation:** HTTP status `301/200` confirms web service is reachable.
 
@@ -97,6 +108,7 @@ curl -I https://google.com
 ```bash
 netstat -an | head
 ```
+<img width="679" height="187" alt="image" src="https://github.com/user-attachments/assets/fe1dcf36-1124-4058-aba5-57ffa445c4c0" />
 
 **Observation:** Shows LISTEN and ESTABLISHED connections.
 
@@ -109,6 +121,8 @@ netstat -an | head
 ```bash
 nc -zv localhost 22
 ```
+
+<img width="617" height="54" alt="image" src="https://github.com/user-attachments/assets/aca5090c-2640-495f-a35a-9ee68f1ce3c6" />
 
 **Result:** Connection successful → service reachable.
 
