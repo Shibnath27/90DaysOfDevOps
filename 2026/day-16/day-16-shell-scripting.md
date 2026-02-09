@@ -24,6 +24,7 @@ vim hello.sh
 #!/bin/bash
 echo "Hello, DevOps!"
 ```
+<img width="595" height="80" alt="image" src="https://github.com/user-attachments/assets/ddfdb8ca-c8cf-4f4e-ab4a-733c47ac9ce1" />
 
 ### Make executable & run
 
@@ -65,6 +66,7 @@ Run:
 chmod +x variables.sh
 ./variables.sh
 ```
+<img width="551" height="62" alt="image" src="https://github.com/user-attachments/assets/79730dc8-7f6f-4bd3-9037-a81e9fbdb501" />
 
 ### 🔍 Single vs Double Quotes
 
@@ -97,6 +99,8 @@ chmod +x greet.sh
 ./greet.sh
 ```
 
+<img width="476" height="121" alt="image" src="https://github.com/user-attachments/assets/b4af0207-414a-4a9a-8f76-ed5f54ead5b3" />
+
 ---
 
 ## ✅ Task 4: If–Else Conditions
@@ -120,6 +124,7 @@ else
   echo "Number is zero"
 fi
 ```
+<img width="505" height="101" alt="image" src="https://github.com/user-attachments/assets/c0193cd7-310a-47d3-a5f4-3eec82deac92" />
 
 ---
 
@@ -141,6 +146,8 @@ else
 fi
 ```
 
+<img width="474" height="76" alt="image" src="https://github.com/user-attachments/assets/0f86a99f-40be-43ae-b0f3-f9e5cb8ffcb3" />
+
 ---
 
 ## ✅ Task 5: Combine It All (server_check.sh)
@@ -152,8 +159,7 @@ vim server_check.sh
 ```bash
 #!/bin/bash
 
-SERVICE="nginx"
-
+read -p "Enter a service name : " SERVICE
 read -p "Do you want to check the status of $SERVICE? (y/n): " ANSWER
 
 if [ "$ANSWER" = "y" ]; then
@@ -174,6 +180,8 @@ Run:
 chmod +x server_check.sh
 ./server_check.sh
 ```
+<img width="529" height="85" alt="image" src="https://github.com/user-attachments/assets/1dbf0679-3973-4dc7-80c8-6b293b833bd3" />
+
 
 📌 **Real DevOps pattern:** checking exit codes with `$?`
 
