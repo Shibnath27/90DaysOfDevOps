@@ -34,6 +34,7 @@ Run:
 chmod +x for_loop.sh
 ./for_loop.sh
 ```
+<img width="568" height="118" alt="image" src="https://github.com/user-attachments/assets/9e11457c-3f1f-4518-a47d-939879e0b365" />
 
 ---
 
@@ -50,6 +51,8 @@ for i in {1..10}; do
   echo "$i"
 done
 ```
+<img width="446" height="190" alt="image" src="https://github.com/user-attachments/assets/53326ef8-b9f0-467b-bb27-ec8205ee0427" />
+
 
 📌 **DevOps use:** iterating over servers, containers, files.
 
@@ -82,6 +85,8 @@ Run:
 chmod +x countdown.sh
 ./countdown.sh
 ```
+<img width="389" height="223" alt="image" src="https://github.com/user-attachments/assets/f565382f-1131-4851-a386-321f970ed1f0" />
+
 
 📌 **Real-world:** retries, wait-for-service loops.
 
@@ -113,6 +118,8 @@ Test:
 ./greet.sh Shibnath
 ```
 
+<img width="483" height="82" alt="image" src="https://github.com/user-attachments/assets/b2c7459d-50b3-4079-a87e-3c4c5644352b" />
+
 ---
 
 ### 🔹 args_demo.sh
@@ -134,6 +141,8 @@ Run:
 ```bash
 ./args_demo.sh one two three
 ```
+<img width="495" height="82" alt="image" src="https://github.com/user-attachments/assets/2ab83192-46a5-4a36-a798-8c27960c804a" />
+
 
 📌 **DevOps gold:** scripts configurable without editing code.
 
@@ -174,6 +183,8 @@ Run:
 ```bash
 sudo ./install_packages.sh
 ```
+<img width="480" height="117" alt="image" src="https://github.com/user-attachments/assets/29c8ba10-60fd-42b0-a60a-fcefea9ae0ab" />
+
 
 📌 **This is real DevOps automation** (idempotent + safe).
 
@@ -197,6 +208,9 @@ touch test.txt
 
 echo "All steps completed successfully"
 ```
+
+<img width="437" height="60" alt="image" src="https://github.com/user-attachments/assets/4b05c919-1bc4-49a6-82d8-c258e1f2a066" />
+
 
 📌 `set -e` = **fail fast**
 📌 `||` = graceful fallback message
