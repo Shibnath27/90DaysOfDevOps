@@ -176,5 +176,3 @@ main
 2. Strict mode prevents silent failures — critical for production scripts.
 3. Using local variables avoids unexpected side effects.
 4. Clean structure (main + functions) makes scripts maintainable.
-
-```
