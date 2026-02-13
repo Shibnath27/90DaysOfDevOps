@@ -37,6 +37,7 @@ find "$LOG_DIR" -type f -name "*.gz" -mtime +30 -delete
 echo "Compressed files: $COMPRESS_COUNT"
 echo "Deleted files: $DELETE_COUNT"
 ```
+<img width="573" height="73" alt="image" src="https://github.com/user-attachments/assets/be5e7332-9a22-4238-911d-c47c60dcfa55" />
 
 ---
 
