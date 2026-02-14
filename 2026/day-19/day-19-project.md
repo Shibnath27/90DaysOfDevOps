@@ -82,6 +82,8 @@ fi
 find "$DEST" -type f -name "backup-*.tar.gz" -mtime +14 -delete
 ```
 
+<img width="857" height="289" alt="image" src="https://github.com/user-attachments/assets/3d2adc42-0e91-49ae-af61-a64333ca2efd" />
+
 ---
 
 ## 🔹 Task 3 – Crontab Understanding
@@ -143,7 +145,7 @@ log() {
 log "Maintenance started"
 
 # Call log rotation
-if ./log_rotate.sh /var/log/myapp >> "$LOG_FILE" 2>&1; then
+if ./log_rotate.sh /var/log/nginx >> "$LOG_FILE" 2>&1; then
   log "Log rotation completed"
 else
   log "Log rotation failed"
@@ -158,6 +160,9 @@ fi
 
 log "Maintenance finished"
 ```
+
+<img width="977" height="197" alt="image" src="https://github.com/user-attachments/assets/67c94336-7623-44bd-9048-06f9290f4d37" />
+
 
 ### Cron entry (Daily 1 AM)
 
