@@ -30,7 +30,8 @@ if [ ! -f "$LOG_FILE" ]; then
 fi
 
 DATE=$(date +%Y-%m-%d)
-REPORT="log_report_${DATE}.txt"
+TIMESTAMP=$(date +%Y-%m-%d_%H-%M-%S)
+REPORT="log_report_${TIMESTAMP}.txt"
 
 TOTAL_LINES=$(wc -l < "$LOG_FILE")
 
@@ -103,6 +104,7 @@ mv "$LOG_FILE" "$ARCHIVE_DIR/"
 
 echo "Log file moved to $ARCHIVE_DIR/"
 ```
+<img width="719" height="370" alt="image" src="https://github.com/user-attachments/assets/507232ee-6d79-40d1-ad3d-7f6277cbbbeb" />
 
 ---
 
