@@ -1,0 +1,24 @@
+Log Analysis Report
+====================
+Date: 2026-02-15
+Log File: sample_log.log
+Total Lines Processed: 50
+Total Error Count: 10
+
+--- Top 5 Error Messages ---
+      1 [ERROR] Segmentation fault - 25750
+      1 [ERROR] Segmentation fault - 25334
+      1 [ERROR] Segmentation fault - 2300
+      1 [ERROR] Invalid input - 28396
+      1 [ERROR] Invalid input - 16369
+
+--- Critical Events ---
+6:2026-02-15 14:41:43 [CRITICAL]  - 24451
+12:2026-02-15 14:41:43 [CRITICAL]  - 9223
+15:2026-02-15 14:41:43 [CRITICAL]  - 27841
+18:2026-02-15 14:41:43 [CRITICAL]  - 16561
+20:2026-02-15 14:41:43 [CRITICAL]  - 8294
+27:2026-02-15 14:41:43 [CRITICAL]  - 31018
+34:2026-02-15 14:41:43 [CRITICAL]  - 6657
+43:2026-02-15 14:41:43 [CRITICAL]  - 11760
+49:2026-02-15 14:41:43 [CRITICAL]  - 27476
