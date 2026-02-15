@@ -1,0 +1,119 @@
+2026-02-15T14:15:03.423965+00:00 ip-172-31-29-119 CRON[930]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-02-15T14:15:03.428705+00:00 ip-172-31-29-119 CRON[930]: pam_unix(cron:session): session closed for user root
+2026-02-15T14:15:07.880568+00:00 ip-172-31-29-119 sshd[936]: Server listening on 0.0.0.0 port 22.
+2026-02-15T14:15:07.880756+00:00 ip-172-31-29-119 sshd[936]: Server listening on :: port 22.
+2026-02-15T14:15:14.307526+00:00 ip-172-31-29-119 sshd[937]: Accepted publickey for ubuntu from 152.58.178.221 port 54941 ssh2: RSA SHA256:4+av3RRmVYLvOwOZJDDE12CQ1Ueh3XWH9MenAKP1hYM
+2026-02-15T14:15:14.309235+00:00 ip-172-31-29-119 sshd[937]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2026-02-15T14:15:14.334488+00:00 ip-172-31-29-119 systemd-logind[555]: New session 2 of user ubuntu.
+2026-02-15T14:15:14.351648+00:00 ip-172-31-29-119 (systemd): pam_unix(systemd-user:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2026-02-15T14:15:17.688676+00:00 ip-172-31-29-119 sshd[1056]: Accepted publickey for ubuntu from 152.58.178.221 port 54943 ssh2: RSA SHA256:4+av3RRmVYLvOwOZJDDE12CQ1Ueh3XWH9MenAKP1hYM
+2026-02-15T14:15:17.690437+00:00 ip-172-31-29-119 sshd[1056]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2026-02-15T14:15:17.694473+00:00 ip-172-31-29-119 systemd-logind[555]: New session 4 of user ubuntu.
+2026-02-15T14:17:01.433851+00:00 ip-172-31-29-119 CRON[1157]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-02-15T14:17:01.437024+00:00 ip-172-31-29-119 CRON[1157]: pam_unix(cron:session): session closed for user root
+2026-02-15T14:17:50.401383+00:00 ip-172-31-29-119 sshd[1179]: Connection closed by 165.232.94.75 port 51102
+2026-02-15T14:18:51.871412+00:00 ip-172-31-29-119 sshd[1185]: Connection closed by authenticating user root 165.232.94.75 port 36702 [preauth]
+2026-02-15T14:18:59.226856+00:00 ip-172-31-29-119 sshd[1187]: Connection closed by 206.189.111.10 port 52736
+2026-02-15T14:20:19.760079+00:00 ip-172-31-29-119 sshd[1408]: Connection closed by authenticating user root 165.232.94.75 port 36098 [preauth]
+2026-02-15T14:20:38.814341+00:00 ip-172-31-29-119 sshd[1412]: Connection closed by authenticating user root 206.189.111.10 port 37442 [preauth]
+2026-02-15T14:21:50.347501+00:00 ip-172-31-29-119 sshd[1446]: Connection closed by authenticating user root 165.232.94.75 port 38202 [preauth]
+2026-02-15T14:21:51.709336+00:00 ip-172-31-29-119 sshd[1448]: Connection closed by authenticating user root 206.189.111.10 port 38420 [preauth]
+2026-02-15T14:22:53.490932+00:00 ip-172-31-29-119 sshd[1458]: Connection closed by authenticating user root 206.189.111.10 port 41458 [preauth]
+2026-02-15T14:23:12.388154+00:00 ip-172-31-29-119 sshd[1461]: Connection closed by authenticating user root 165.232.94.75 port 34220 [preauth]
+2026-02-15T14:23:56.478746+00:00 ip-172-31-29-119 sshd[1468]: Connection closed by authenticating user root 206.189.111.10 port 42994 [preauth]
+2026-02-15T14:24:57.184033+00:00 ip-172-31-29-119 sshd[1600]: Connection closed by authenticating user root 206.189.111.10 port 37602 [preauth]
+2026-02-15T14:25:01.441563+00:00 ip-172-31-29-119 CRON[1602]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-02-15T14:25:01.445887+00:00 ip-172-31-29-119 CRON[1602]: pam_unix(cron:session): session closed for user root
+2026-02-15T14:26:07.947660+00:00 ip-172-31-29-119 sshd[1605]: Connection closed by authenticating user root 206.189.111.10 port 53948 [preauth]
+2026-02-15T14:30:13.012668+00:00 ip-172-31-29-119 sshd[1613]: Accepted publickey for ubuntu from 152.58.178.221 port 55063 ssh2: RSA SHA256:4+av3RRmVYLvOwOZJDDE12CQ1Ueh3XWH9MenAKP1hYM
+2026-02-15T14:30:13.018098+00:00 ip-172-31-29-119 sshd[1613]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2026-02-15T14:30:13.022605+00:00 ip-172-31-29-119 systemd-logind[555]: New session 7 of user ubuntu.
+2026-02-15T14:30:16.326530+00:00 ip-172-31-29-119 sshd[1673]: Accepted publickey for ubuntu from 152.58.178.221 port 55065 ssh2: RSA SHA256:4+av3RRmVYLvOwOZJDDE12CQ1Ueh3XWH9MenAKP1hYM
+2026-02-15T14:30:16.328318+00:00 ip-172-31-29-119 sshd[1673]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2026-02-15T14:30:16.332210+00:00 ip-172-31-29-119 systemd-logind[555]: New session 8 of user ubuntu.
+2026-02-15T14:31:19.124589+00:00 ip-172-31-29-119 sshd[1739]: Connection closed by 44.223.21.182 port 56144 [preauth]
+2026-02-15T14:34:41.708227+00:00 ip-172-31-29-119 sudo:   ubuntu : TTY=pts/1 ; PWD=/home/ubuntu/scripts ; USER=root ; COMMAND=./log_analyzer.sh /var/log/auth.log
+2026-02-15T14:34:41.711626+00:00 ip-172-31-29-119 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by ubuntu(uid=1000)
+2026-02-15T14:34:41.726709+00:00 ip-172-31-29-119 sudo: pam_unix(sudo:session): session closed for user root
+2026-02-15T14:35:01.451227+00:00 ip-172-31-29-119 CRON[1839]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-02-15T14:35:01.453523+00:00 ip-172-31-29-119 CRON[1839]: pam_unix(cron:session): session closed for user root
+2026-02-15T14:44:32.060244+00:00 ip-172-31-29-119 sshd[937]: pam_unix(sshd:session): session closed for user ubuntu
+2026-02-15T14:44:32.064845+00:00 ip-172-31-29-119 systemd-logind[555]: Session 2 logged out. Waiting for processes to exit.
+2026-02-15T14:44:32.066485+00:00 ip-172-31-29-119 systemd-logind[555]: Removed session 2.
+2026-02-15T14:45:01.463197+00:00 ip-172-31-29-119 CRON[1994]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-02-15T14:45:01.469106+00:00 ip-172-31-29-119 CRON[1994]: pam_unix(cron:session): session closed for user root
+2026-02-15T14:55:01.475718+00:00 ip-172-31-29-119 CRON[2038]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-02-15T14:55:01.479592+00:00 ip-172-31-29-119 CRON[2038]: pam_unix(cron:session): session closed for user root
+2026-02-15T15:05:01.484573+00:00 ip-172-31-29-119 CRON[2093]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-02-15T15:05:01.489045+00:00 ip-172-31-29-119 CRON[2093]: pam_unix(cron:session): session closed for user root
+2026-02-15T15:06:11.486919+00:00 ip-172-31-29-119 sshd[2097]: Connection closed by 209.38.44.43 port 54232
+2026-02-15T15:15:01.494883+00:00 ip-172-31-29-119 CRON[2181]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-02-15T15:15:01.498477+00:00 ip-172-31-29-119 CRON[2181]: pam_unix(cron:session): session closed for user root
+2026-02-15T15:17:01.501473+00:00 ip-172-31-29-119 CRON[2191]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-02-15T15:17:01.503851+00:00 ip-172-31-29-119 CRON[2191]: pam_unix(cron:session): session closed for user root
+2026-02-15T15:25:01.510285+00:00 ip-172-31-29-119 CRON[2265]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-02-15T15:25:01.527271+00:00 ip-172-31-29-119 CRON[2265]: pam_unix(cron:session): session closed for user root
+2026-02-15T15:27:38.194016+00:00 ip-172-31-29-119 sshd[2398]: Accepted publickey for ubuntu from 152.58.178.221 port 49867 ssh2: RSA SHA256:4+av3RRmVYLvOwOZJDDE12CQ1Ueh3XWH9MenAKP1hYM
+2026-02-15T15:27:38.195964+00:00 ip-172-31-29-119 sshd[2398]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2026-02-15T15:27:38.199783+00:00 ip-172-31-29-119 systemd-logind[555]: New session 16 of user ubuntu.
+2026-02-15T15:27:41.208050+00:00 ip-172-31-29-119 sshd[2497]: Accepted publickey for ubuntu from 152.58.178.221 port 55611 ssh2: RSA SHA256:4+av3RRmVYLvOwOZJDDE12CQ1Ueh3XWH9MenAKP1hYM
+2026-02-15T15:27:41.209778+00:00 ip-172-31-29-119 sshd[2497]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2026-02-15T15:27:41.213534+00:00 ip-172-31-29-119 systemd-logind[555]: New session 17 of user ubuntu.
+2026-02-15T15:30:32.037347+00:00 ip-172-31-29-119 sshd[2599]: Accepted publickey for ubuntu from 152.58.178.221 port 55682 ssh2: RSA SHA256:4+av3RRmVYLvOwOZJDDE12CQ1Ueh3XWH9MenAKP1hYM
+2026-02-15T15:30:32.039149+00:00 ip-172-31-29-119 sshd[2599]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2026-02-15T15:30:32.043290+00:00 ip-172-31-29-119 systemd-logind[555]: New session 18 of user ubuntu.
+2026-02-15T15:30:36.112663+00:00 ip-172-31-29-119 sshd[2655]: Received disconnect from 152.58.178.221 port 55682:11: disconnected by user
+2026-02-15T15:30:36.116109+00:00 ip-172-31-29-119 sshd[2655]: Disconnected from user ubuntu 152.58.178.221 port 55682
+2026-02-15T15:30:36.116589+00:00 ip-172-31-29-119 sshd[2599]: pam_unix(sshd:session): session closed for user ubuntu
+2026-02-15T15:30:36.116899+00:00 ip-172-31-29-119 systemd-logind[555]: Session 18 logged out. Waiting for processes to exit.
+2026-02-15T15:30:36.116974+00:00 ip-172-31-29-119 systemd-logind[555]: Removed session 18.
+2026-02-15T15:30:49.230889+00:00 ip-172-31-29-119 sshd[2657]: Accepted publickey for ubuntu from 152.58.178.221 port 55690 ssh2: RSA SHA256:4+av3RRmVYLvOwOZJDDE12CQ1Ueh3XWH9MenAKP1hYM
+2026-02-15T15:30:49.232525+00:00 ip-172-31-29-119 sshd[2657]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2026-02-15T15:30:49.235669+00:00 ip-172-31-29-119 systemd-logind[555]: New session 19 of user ubuntu.
+2026-02-15T15:30:53.557542+00:00 ip-172-31-29-119 sshd[2704]: Received disconnect from 152.58.178.221 port 55690:11: disconnected by user
+2026-02-15T15:30:53.557762+00:00 ip-172-31-29-119 sshd[2704]: Disconnected from user ubuntu 152.58.178.221 port 55690
+2026-02-15T15:30:53.558473+00:00 ip-172-31-29-119 sshd[2657]: pam_unix(sshd:session): session closed for user ubuntu
+2026-02-15T15:30:53.561054+00:00 ip-172-31-29-119 systemd-logind[555]: Session 19 logged out. Waiting for processes to exit.
+2026-02-15T15:30:53.561653+00:00 ip-172-31-29-119 systemd-logind[555]: Removed session 19.
+2026-02-15T15:31:08.627646+00:00 ip-172-31-29-119 sshd[2706]: Accepted publickey for ubuntu from 152.58.178.221 port 55692 ssh2: RSA SHA256:4+av3RRmVYLvOwOZJDDE12CQ1Ueh3XWH9MenAKP1hYM
+2026-02-15T15:31:08.629237+00:00 ip-172-31-29-119 sshd[2706]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2026-02-15T15:31:08.632338+00:00 ip-172-31-29-119 systemd-logind[555]: New session 20 of user ubuntu.
+2026-02-15T15:31:12.567752+00:00 ip-172-31-29-119 sshd[2753]: Received disconnect from 152.58.178.221 port 55692:11: disconnected by user
+2026-02-15T15:31:12.567879+00:00 ip-172-31-29-119 sshd[2753]: Disconnected from user ubuntu 152.58.178.221 port 55692
+2026-02-15T15:31:12.568472+00:00 ip-172-31-29-119 sshd[2706]: pam_unix(sshd:session): session closed for user ubuntu
+2026-02-15T15:31:12.571250+00:00 ip-172-31-29-119 systemd-logind[555]: Session 20 logged out. Waiting for processes to exit.
+2026-02-15T15:31:12.571811+00:00 ip-172-31-29-119 systemd-logind[555]: Removed session 20.
+2026-02-15T15:31:42.978447+00:00 ip-172-31-29-119 sshd[2755]: Connection closed by authenticating user ubuntu 152.58.178.221 port 14501 [preauth]
+2026-02-15T15:32:15.834728+00:00 ip-172-31-29-119 sshd[2757]: Accepted publickey for ubuntu from 152.58.178.221 port 55699 ssh2: RSA SHA256:4+av3RRmVYLvOwOZJDDE12CQ1Ueh3XWH9MenAKP1hYM
+2026-02-15T15:32:15.836358+00:00 ip-172-31-29-119 sshd[2757]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2026-02-15T15:32:15.840072+00:00 ip-172-31-29-119 systemd-logind[555]: New session 21 of user ubuntu.
+2026-02-15T15:32:20.243645+00:00 ip-172-31-29-119 sshd[2813]: Received disconnect from 152.58.178.221 port 55699:11: disconnected by user
+2026-02-15T15:32:20.243819+00:00 ip-172-31-29-119 sshd[2813]: Disconnected from user ubuntu 152.58.178.221 port 55699
+2026-02-15T15:32:20.244423+00:00 ip-172-31-29-119 sshd[2757]: pam_unix(sshd:session): session closed for user ubuntu
+2026-02-15T15:32:20.247335+00:00 ip-172-31-29-119 systemd-logind[555]: Session 21 logged out. Waiting for processes to exit.
+2026-02-15T15:32:20.247913+00:00 ip-172-31-29-119 systemd-logind[555]: Removed session 21.
+2026-02-15T15:34:23.374948+00:00 ip-172-31-29-119 sshd[2829]: Accepted publickey for ubuntu from 152.58.178.221 port 55708 ssh2: RSA SHA256:4+av3RRmVYLvOwOZJDDE12CQ1Ueh3XWH9MenAKP1hYM
+2026-02-15T15:34:23.377837+00:00 ip-172-31-29-119 sshd[2829]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2026-02-15T15:34:23.380042+00:00 ip-172-31-29-119 systemd-logind[555]: New session 22 of user ubuntu.
+2026-02-15T15:34:36.362940+00:00 ip-172-31-29-119 sshd[2885]: Received disconnect from 152.58.178.221 port 55708:11: disconnected by user
+2026-02-15T15:34:36.366212+00:00 ip-172-31-29-119 sshd[2885]: Disconnected from user ubuntu 152.58.178.221 port 55708
+2026-02-15T15:34:36.366707+00:00 ip-172-31-29-119 sshd[2829]: pam_unix(sshd:session): session closed for user ubuntu
+2026-02-15T15:34:36.366850+00:00 ip-172-31-29-119 systemd-logind[555]: Session 22 logged out. Waiting for processes to exit.
+2026-02-15T15:34:36.367340+00:00 ip-172-31-29-119 systemd-logind[555]: Removed session 22.
+2026-02-15T15:35:01.541113+00:00 ip-172-31-29-119 CRON[2889]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-02-15T15:35:01.544357+00:00 ip-172-31-29-119 CRON[2889]: pam_unix(cron:session): session closed for user root
+2026-02-15T15:36:30.895976+00:00 ip-172-31-29-119 sshd[2905]: Connection closed by 18.218.94.172 port 39254
+2026-02-15T15:45:01.549641+00:00 ip-172-31-29-119 CRON[2943]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-02-15T15:45:01.554569+00:00 ip-172-31-29-119 CRON[2943]: pam_unix(cron:session): session closed for user root
+2026-02-15T15:45:05.921018+00:00 ip-172-31-29-119 sshd[2946]: Accepted publickey for ubuntu from 152.58.178.221 port 14546 ssh2: RSA SHA256:4+av3RRmVYLvOwOZJDDE12CQ1Ueh3XWH9MenAKP1hYM
+2026-02-15T15:45:05.922852+00:00 ip-172-31-29-119 sshd[2946]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2026-02-15T15:45:05.926007+00:00 ip-172-31-29-119 systemd-logind[555]: New session 25 of user ubuntu.
+2026-02-15T15:45:08.844868+00:00 ip-172-31-29-119 sshd[3002]: Received disconnect from 152.58.178.221 port 14546:11: disconnected by user
+2026-02-15T15:45:08.848341+00:00 ip-172-31-29-119 sshd[3002]: Disconnected from user ubuntu 152.58.178.221 port 14546
+2026-02-15T15:45:08.849143+00:00 ip-172-31-29-119 sshd[2946]: pam_unix(sshd:session): session closed for user ubuntu
+2026-02-15T15:45:08.849408+00:00 ip-172-31-29-119 systemd-logind[555]: Session 25 logged out. Waiting for processes to exit.
+2026-02-15T15:45:08.850238+00:00 ip-172-31-29-119 systemd-logind[555]: Removed session 25.
+2026-02-15T15:45:44.897643+00:00 ip-172-31-29-119 sshd[3007]: Connection closed by authenticating user ubuntu 152.58.178.221 port 55814 [preauth]
+2026-02-15T15:46:53.529229+00:00 ip-172-31-29-119 sshd[3012]: Accepted publickey for ubuntu from 152.58.178.221 port 55824 ssh2: RSA SHA256:4+av3RRmVYLvOwOZJDDE12CQ1Ueh3XWH9MenAKP1hYM
+2026-02-15T15:46:53.531032+00:00 ip-172-31-29-119 sshd[3012]: pam_unix(sshd:session): session opened for user ubuntu(uid=1000) by ubuntu(uid=0)
+2026-02-15T15:46:53.534860+00:00 ip-172-31-29-119 systemd-logind[555]: New session 26 of user ubuntu.
