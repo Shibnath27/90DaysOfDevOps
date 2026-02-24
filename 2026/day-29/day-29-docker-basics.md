@@ -128,6 +128,8 @@ Verify:
 docker --version
 sudo docker run hello-world
 ```
+<img width="1017" height="404" alt="image" src="https://github.com/user-attachments/assets/fc8c805e-fd76-49ed-85c1-ad39fec59712" />
+
 
 ### What `hello-world` Did
 
@@ -154,6 +156,7 @@ This verified:
 ```bash
 docker run -d -p 8080:80 --name my-nginx nginx
 ```
+<img width="1132" height="268" alt="image" src="https://github.com/user-attachments/assets/b13495cb-bc24-4a92-8203-01165ff87bf1" />
 
 Explanation:
 
@@ -186,6 +189,7 @@ ls
 apt update
 whoami
 ```
+<img width="886" height="432" alt="image" src="https://github.com/user-attachments/assets/7b8686ed-882e-4d9c-bb50-07ca9c14400b" />
 
 Exit with:
 
@@ -216,6 +220,7 @@ docker ps -a
 ```bash
 docker stop my-nginx
 ```
+<img width="1081" height="120" alt="image" src="https://github.com/user-attachments/assets/c3682bc5-3f57-4247-a50f-cfaab3cb4c44" />
 
 ---
 
@@ -264,6 +269,9 @@ Host port 9090 → Container port 80
 docker logs web-server
 ```
 
+<img width="1077" height="296" alt="image" src="https://github.com/user-attachments/assets/7f40e1d7-282f-4c88-b811-f78d2e6656a2" />
+
+
 Useful for debugging.
 
 ---
@@ -285,4 +293,3 @@ This attaches to running container.
 * Containers are processes, not full VMs.
 * Docker simplifies application deployment drastically.
 
-zation territory — core DevOps infrastructure skill.
