@@ -23,6 +23,7 @@ docker pull alpine
 ```bash
 docker images
 ```
+<img width="740" height="122" alt="image" src="https://github.com/user-attachments/assets/1c8612f7-e17e-4885-bd1a-367808239197" />
 
 Typical size comparison:
 
@@ -46,6 +47,7 @@ Ubuntu includes many base utilities → larger footprint.
 ```bash
 docker inspect nginx
 ```
+<img width="1144" height="610" alt="image" src="https://github.com/user-attachments/assets/595fa2d1-50b9-4bbb-adf1-df7e1e7dcd1f" />
 
 Information you can see:
 
@@ -64,6 +66,7 @@ Information you can see:
 ```bash
 docker rmi alpine
 ```
+<img width="1102" height="184" alt="image" src="https://github.com/user-attachments/assets/3a7bdac7-e218-4100-bdf4-a04b267310ff" />
 
 If image is in use by a container → removal will fail.
 
@@ -74,6 +77,7 @@ If image is in use by a container → removal will fail.
 ```bash
 docker image history nginx
 ```
+<img width="1142" height="322" alt="image" src="https://github.com/user-attachments/assets/673ca0dd-0380-484e-ba51-c87f8a3b81fb" />
 
 Output shows:
 
@@ -126,6 +130,7 @@ Check:
 ```bash
 docker ps -a
 ```
+<img width="1124" height="177" alt="image" src="https://github.com/user-attachments/assets/bec86a16-fc38-41e0-a4f1-383e472b8eb0" />
 
 State → Created
 
@@ -146,6 +151,7 @@ State → Running
 ```bash
 docker pause lifecycle-test
 ```
+<img width="1140" height="172" alt="image" src="https://github.com/user-attachments/assets/cdecb5aa-a2ac-4bad-8111-cdda250af31e" />
 
 State → Paused
 
@@ -182,6 +188,7 @@ docker restart lifecycle-test
 ```bash
 docker kill lifecycle-test
 ```
+<img width="1115" height="209" alt="image" src="https://github.com/user-attachments/assets/1ce37bd0-8067-4c63-a75e-d88fbbfc2b6b" />
 
 Immediately terminates process.
 
@@ -220,6 +227,7 @@ docker run -d -p 8080:80 --name web nginx
 ```bash
 docker logs web
 ```
+<img width="1110" height="292" alt="image" src="https://github.com/user-attachments/assets/6786e2ea-b4cf-44ca-9f0c-33ecee7c8724" />
 
 ---
 
@@ -243,6 +251,7 @@ Explore:
 ls /
 cat /etc/nginx/nginx.conf
 ```
+<img width="872" height="513" alt="image" src="https://github.com/user-attachments/assets/13b50dbc-26da-47fe-968c-e85941811303" />
 
 ---
 
@@ -251,6 +260,7 @@ cat /etc/nginx/nginx.conf
 ```bash
 docker exec web ls /usr/share/nginx/html
 ```
+<img width="680" height="59" alt="image" src="https://github.com/user-attachments/assets/f44bce3f-be87-4e72-8154-53f98c3016fa" />
 
 ---
 
@@ -278,6 +288,7 @@ Find:
 ```bash
 docker stop $(docker ps -q)
 ```
+<img width="760" height="60" alt="image" src="https://github.com/user-attachments/assets/67a91bdc-eac8-4f3f-b0b4-084c838fdf61" />
 
 ---
 
@@ -286,6 +297,7 @@ docker stop $(docker ps -q)
 ```bash
 docker container prune
 ```
+<img width="644" height="231" alt="image" src="https://github.com/user-attachments/assets/5be2bc0b-0ab7-4140-aa7d-44fe933228b0" />
 
 ---
 
@@ -294,6 +306,7 @@ docker container prune
 ```bash
 docker image prune
 ```
+<img width="844" height="245" alt="image" src="https://github.com/user-attachments/assets/c1c59fa8-b60f-44cf-84bf-285b9eac1bdf" />
 
 ---
 
@@ -302,6 +315,7 @@ docker image prune
 ```bash
 docker system df
 ```
+<img width="600" height="113" alt="image" src="https://github.com/user-attachments/assets/01332f05-a1c8-4914-9885-ab7dd57747b8" />
 
 ---
 
