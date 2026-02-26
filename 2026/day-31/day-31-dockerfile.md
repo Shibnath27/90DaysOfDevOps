@@ -37,6 +37,8 @@ docker build -t my-ubuntu:v1 .
 
 > `.` = build context (current directory)
 
+<img width="1164" height="615" alt="image" src="https://github.com/user-attachments/assets/cefc193e-f34c-4656-9e6d-447702eca19d" />
+
 ---
 
 ## Step 4: Run Container
@@ -46,6 +48,8 @@ docker run my-ubuntu:v1
 ```
 
 Output:
+
+<img width="634" height="58" alt="image" src="https://github.com/user-attachments/assets/b69cc00d-c86b-4fd6-9ed1-a80036eb14dd" />
 
 ```
 Hello from my custom image!
@@ -84,6 +88,7 @@ EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 ```
 
+
 ---
 
 ## What Each Instruction Does
@@ -101,6 +106,7 @@ CMD ["nginx", "-g", "daemon off;"]
 ```bash
 docker build -t nginx-demo:v1 .
 ```
+<img width="1159" height="613" alt="image" src="https://github.com/user-attachments/assets/1d674c88-3b96-4f49-a2f2-75134763d35d" />
 
 ---
 
@@ -115,6 +121,7 @@ Visit:
 ```
 http://localhost:8080
 ```
+<img width="989" height="424" alt="image" src="https://github.com/user-attachments/assets/9afb7191-7c1b-4378-86c5-6a735dca8a09" />
 
 Your custom HTML page loads.
 
@@ -210,14 +217,137 @@ Create `index.html`:
 
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Docker Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Docker Deployment | Shibnath Das</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      padding: 40px 60px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      max-width: 700px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: #00d4ff;
+    }
+
+    h2 {
+      font-weight: 400;
+      margin-bottom: 30px;
+      color: #e0e0e0;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 10px 18px;
+      margin: 5px;
+      border-radius: 25px;
+      background: #00d4ff;
+      color: #000;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .section {
+      margin-top: 30px;
+      text-align: left;
+    }
+
+    .section h3 {
+      border-left: 4px solid #00d4ff;
+      padding-left: 10px;
+      margin-bottom: 15px;
+      color: #ffffff;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      padding: 6px 0;
+      font-size: 0.95rem;
+      color: #e6e6e6;
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 0.85rem;
+      color: #cccccc;
+    }
+
+    a {
+      color: #00d4ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Deployed via Docker!</h1>
+  <div class="container">
+    <h1>Dockerized Web Application</h1>
+    <h2>Built & Deployed by Shibnath Das</h2>
+
+    <div>
+      <span class="badge">Docker</span>
+      <span class="badge">Nginx</span>
+      <span class="badge">Linux</span>
+      <span class="badge">DevOps</span>
+    </div>
+
+    <div class="section">
+      <h3>🚀 What This Demonstrates</h3>
+      <ul>
+        <li>✔ Custom Dockerfile creation</li>
+        <li>✔ Image build & tagging</li>
+        <li>✔ Containerized Nginx deployment</li>
+        <li>✔ Port mapping and runtime execution</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>📂 Project Info</h3>
+      <ul>
+        <li>Image: <strong>my-website:v1</strong></li>
+        <li>Base Image: <strong>nginx:alpine</strong></li>
+        <li>Exposed Port: <strong>80</strong></li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      Part of my 90 Days of DevOps journey.<br>
+      Connect with me on 
+      <a href="https://www.linkedin.com/in/shibnath/" target="_blank">LinkedIn</a>
+    </div>
+  </div>
 </body>
 </html>
+
 ```
 
 ---
@@ -251,6 +381,9 @@ Visit:
 ```
 http://localhost:8080
 ```
+
+<img width="1358" height="684" alt="image" src="https://github.com/user-attachments/assets/b972daf5-2cc8-4427-8a51-73fc6b86399f" />
+
 
 ✔ Custom website running inside container.
 
