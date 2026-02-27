@@ -73,6 +73,7 @@ Verify:
 ```bash
 docker volume ls
 ```
+<img width="755" height="72" alt="image" src="https://github.com/user-attachments/assets/994596eb-27ae-4d1b-a4b5-32335d0a738b" />
 
 ---
 
@@ -83,8 +84,9 @@ docker run -d \
   --name pg-vol \
   -e POSTGRES_PASSWORD=secret \
   -v pg-data:/var/lib/postgresql/data \
-  postgres
+  postgres:16
 ```
+<img width="1161" height="495" alt="image" src="https://github.com/user-attachments/assets/5594f3e6-2864-4bb9-b112-0f429be2f6b7" />
 
 Create data again.
 
@@ -104,7 +106,7 @@ docker run -d \
   --name pg-vol2 \
   -e POSTGRES_PASSWORD=secret \
   -v pg-data:/var/lib/postgresql/data \
-  postgres
+  postgres:16
 ```
 
 Check table:
@@ -118,6 +120,7 @@ Check table:
 ```bash
 docker volume inspect pg-data
 ```
+<img width="811" height="204" alt="image" src="https://github.com/user-attachments/assets/eb5e113c-0858-409d-aeab-ed88ea3ba5c2" />
 
 ### Why This Works
 
@@ -131,8 +134,8 @@ Deleting the container does not delete the volume.
 ## Create Host Folder
 
 ```bash
-mkdir ~/my-site
-echo "<h1>Live Edit Test</h1>" > ~/my-site/index.html
+mkdir my-site
+echo "<h1>Live Edit Test</h1>" > my-site/index.html
 ```
 
 ---
@@ -142,7 +145,7 @@ echo "<h1>Live Edit Test</h1>" > ~/my-site/index.html
 ```bash
 docker run -d \
   -p 8080:80 \
-  -v ~/my-site:/usr/share/nginx/html \
+  -v $(pwd)/my-site:/usr/share/nginx/html \
   --name nginx-bind \
   nginx
 ```
@@ -152,11 +155,12 @@ Visit:
 ```
 http://localhost:8080
 ```
+<img width="1086" height="439" alt="image" src="https://github.com/user-attachments/assets/bf2084e6-d366-4fe8-a7e6-fa49f73c337b" />
 
 Edit file on host:
 
 ```bash
-nano ~/my-site/index.html
+nano my-site/index.html
 ```
 
 Refresh browser.
@@ -188,6 +192,7 @@ Named volumes are safer for databases in production.
 ```bash
 docker network ls
 ```
+<img width="702" height="108" alt="image" src="https://github.com/user-attachments/assets/dd28d614-a561-4385-8418-63ec1b9c1021" />
 
 Default networks:
 
