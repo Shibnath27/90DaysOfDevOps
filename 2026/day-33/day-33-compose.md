@@ -11,22 +11,18 @@
 ## Check Compose Version
 
 ```bash
-docker compose version
+docker-compose --version
 ```
 
 If not installed (older systems):
 
 ```bash
-sudo apt install docker-compose-plugin
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+docker-compose --version
 ```
 
-Docker Compose v2 runs as:
-
-```
-docker compose
-```
-
-(not `docker-compose`)
+<img width="776" height="33" alt="image" src="https://github.com/user-attachments/assets/2c0367da-d09f-47f7-904c-7288dc6ab711" />
 
 ---
 
@@ -66,6 +62,7 @@ Access:
 ```
 http://localhost:8080
 ```
+<img width="1336" height="390" alt="image" src="https://github.com/user-attachments/assets/8a95846c-3aa3-4481-b464-51793b31085b" />
 
 ---
 
@@ -143,6 +140,7 @@ Access:
 ```
 http://localhost:8081
 ```
+<img width="1360" height="682" alt="image" src="https://github.com/user-attachments/assets/da64667b-3b25-41ee-94cb-b0db5b9636e7" />
 
 Complete WordPress setup.
 
