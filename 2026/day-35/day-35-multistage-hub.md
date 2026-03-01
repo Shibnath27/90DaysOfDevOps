@@ -138,6 +138,7 @@ Check size:
 ```bash
 docker images
 ```
+<img width="687" height="64" alt="image" src="https://github.com/user-attachments/assets/c3010f74-9880-4cfb-a1a2-7d12318b65b9" />
 
 Example size:
 ~ 120–150MB
