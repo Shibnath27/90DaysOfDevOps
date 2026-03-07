@@ -23,8 +23,10 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Print PR branch
-        run: echo "PR check running for branch: ${{ github.head_ref }}"
+        run: echo "PR check running for branch ${{ github.head_ref }}"
 ```
+<img width="1365" height="563" alt="image" src="https://github.com/user-attachments/assets/2a9892b0-87d3-4fdd-bf13-da33b0feb9cf" />
+
 
 ### Test Steps
 
@@ -67,7 +69,7 @@ jobs:
 
     steps:
       - name: Print selected environment
-        run: echo "Deployment target: ${{ github.event.inputs.environment }}"
+        run: echo "Deployment target ${{ github.event.inputs.environment }}"
 ```
 
 ### How to run it
@@ -76,6 +78,9 @@ jobs:
 2. Select **Manual Workflow**
 3. Click **Run workflow**
 4. Enter value: `staging` or `production`
+
+
+<img width="1364" height="563" alt="image" src="https://github.com/user-attachments/assets/9037879a-7ad8-4d20-807e-b3e42bc60a77" />
 
 ---
 
@@ -183,6 +188,8 @@ So total jobs executed:
 ```
 
 All run **in parallel**.
+
+<img width="1364" height="605" alt="image" src="https://github.com/user-attachments/assets/b70a6d4a-247f-4436-967c-6cd25eaca6b4" />
 
 ---
 
