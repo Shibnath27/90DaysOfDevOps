@@ -289,5 +289,5 @@ Cost: Your infrastructure cost
 Pre-installed tools: You manage them
 Good for: Custom environments and private infrastructure
 Security concern: Must secure the machine yourself
-```
+
 
