@@ -65,6 +65,7 @@ ubuntu-job
 windows-job
 macos-job
 ```
+<img width="1327" height="585" alt="image" src="https://github.com/user-attachments/assets/d46f73bd-fc6c-41d0-bd9c-fc2b4acf628f" />
 
 ---
 
@@ -168,6 +169,7 @@ jobs:
       - name: Create test file
         run: echo "Runner test file" > runner-test.txt
 ```
+<img width="1346" height="578" alt="image" src="https://github.com/user-attachments/assets/d3eb422a-1ecc-4207-b1fc-fe6b47ba8b81" />
 
 ### Verification
 
