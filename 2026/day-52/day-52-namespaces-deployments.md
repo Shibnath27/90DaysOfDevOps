@@ -78,6 +78,7 @@ kubectl run nginx-staging --image=nginx:latest -n staging
 kubectl get pods
 kubectl get pods -A
 ```
+<img width="1021" height="312" alt="image" src="https://github.com/user-attachments/assets/8cf735b8-bad6-4ff7-92eb-23c983b5d5e4" />
 
 ### Insight
 
@@ -129,6 +130,7 @@ kubectl apply -f nginx-deployment.yaml
 kubectl get deployments -n dev
 kubectl get pods -n dev
 ```
+<img width="670" height="297" alt="image" src="https://github.com/user-attachments/assets/029becc8-a19a-4275-aebe-6385a5737758" />
 
 ---
 
@@ -148,6 +150,7 @@ kubectl get pods -n dev
 kubectl delete pod <pod-name> -n dev
 kubectl get pods -n dev
 ```
+<img width="815" height="277" alt="image" src="https://github.com/user-attachments/assets/f4ed6751-666a-4088-8484-2951eb67b460" />
 
 ### Observation
 
