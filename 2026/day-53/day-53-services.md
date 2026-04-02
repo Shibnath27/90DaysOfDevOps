@@ -75,6 +75,7 @@ spec:
 kubectl apply -f app-deployment.yaml
 kubectl get pods -o wide
 ```
+<img width="1075" height="106" alt="Screenshot 2026-04-02 220925" src="https://github.com/user-attachments/assets/51c5481a-09c0-4814-ba07-fb6ac215bf19" />
 
 ---
 
@@ -111,6 +112,7 @@ spec:
 kubectl apply -f clusterip-service.yaml
 kubectl get services
 ```
+<img width="740" height="117" alt="Screenshot 2026-04-02 221211" src="https://github.com/user-attachments/assets/127262d2-54b3-45d4-b5d5-99626e7a19d7" />
 
 ---
 
@@ -125,6 +127,7 @@ Inside container:
 ```
 wget -qO- http://web-app-clusterip
 ```
+<img width="1211" height="448" alt="image" src="https://github.com/user-attachments/assets/58a2f78e-684e-436a-b0cc-f1e76f6bd7e3" />
 
 ---
 
@@ -276,6 +279,7 @@ kubectl get services -o wide
 ```
 kubectl describe service web-app-loadbalancer
 ```
+<img width="781" height="309" alt="image" src="https://github.com/user-attachments/assets/06b2f81d-1760-44df-90c2-2f795e578ddb" />
 
 ✔️ Contains:
 
