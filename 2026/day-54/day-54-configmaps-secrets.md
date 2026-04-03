@@ -30,6 +30,7 @@ kubectl create configmap app-config \
 ```
 kubectl get configmap app-config -o yaml
 ```
+<img width="600" height="264" alt="image" src="https://github.com/user-attachments/assets/8202db6d-4756-4f43-87ed-9ef7e7258833" />
 
 ✔️ All key-value pairs visible
 ✔️ Stored as plain text
@@ -85,6 +86,7 @@ kubectl apply -f nginx-config.yaml
 ```
 kubectl get configmap nginx-config -o yaml
 ```
+<img width="1183" height="398" alt="image" src="https://github.com/user-attachments/assets/c68c2e28-b496-442b-9a6b-e16adc8ac776" />
 
 ✔️ File content correctly embedded
 
@@ -136,7 +138,8 @@ spec:
 ## Test
 
 ```
-kubectl exec nginx-config-pod -- curl -s http://localhost/health
+kubectl exec nginx-config-pod -- sh -c "curl -s http://localhost/health && echo"
+
 ```
 
 ✔️ Response: **healthy**
@@ -173,6 +176,7 @@ kubectl apply -f db-secret.yaml
 ```
 kubectl get secret db-credentials -o yaml
 ```
+<img width="1192" height="280" alt="image" src="https://github.com/user-attachments/assets/1f49a710-ecde-4a7f-bc6e-d634b344f808" />
 
 ---
 
