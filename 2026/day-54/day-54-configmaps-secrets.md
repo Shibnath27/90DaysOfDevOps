@@ -4,21 +4,19 @@
 
 ## 🚀 Overview
 
-Today I tackled **configuration management in Kubernetes**.
+Today I implemented **configuration management in Kubernetes using YAML manifests**, focusing on:
 
-Hardcoding configs inside images is a bad practice.
-Kubernetes solves this with:
+* ConfigMaps (non-sensitive data)
+* Secrets (sensitive data)
 
-* **ConfigMaps** → non-sensitive configuration
-* **Secrets** → sensitive data (credentials, passwords)
+Also explored **dynamic updates and consumption patterns**.
 
 ---
 
 
-
 # 🧠 Task 1: ConfigMap from Literals
 
-## Create ConfigMap
+## Command Used
 
 ```
 kubectl create configmap app-config \
@@ -27,27 +25,20 @@ kubectl create configmap app-config \
   --from-literal=APP_PORT=8080
 ```
 
----
-
-## Inspect
+## Verification
 
 ```
-kubectl describe configmap app-config
 kubectl get configmap app-config -o yaml
 ```
 
----
-
-## Verification
-
 ✔️ All key-value pairs visible
-✔️ Stored as **plain text (not encrypted)**
+✔️ Stored as plain text
 
 ---
 
-# 🧩 Task 2: ConfigMap from File
+# 🧩 Task 2: ConfigMap from File (YAML)
 
-## Custom Nginx Config (`default.conf`)
+## Nginx Config File (`default.conf`)
 
 ```
 server {
@@ -61,27 +52,47 @@ server {
 
 ---
 
-## Create ConfigMap
+## ConfigMap YAML: `nginx-config.yaml`
 
 ```
-kubectl create configmap nginx-config --from-file=default.conf=default.conf
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-config
+data:
+  default.conf: |
+    server {
+        listen 80;
+
+        location /health {
+            return 200 'healthy';
+        }
+    }
 ```
 
 ---
 
-## Verify
+## Apply
+
+```
+kubectl apply -f nginx-config.yaml
+```
+
+---
+
+## Verification
 
 ```
 kubectl get configmap nginx-config -o yaml
 ```
 
-✔️ File content stored correctly
+✔️ File content correctly embedded
 
 ---
 
 # ⚙️ Task 3: Use ConfigMaps in Pods
 
-## Pod 1: Environment Variables
+## Env-based Pod
 
 ```
 apiVersion: v1
@@ -100,7 +111,7 @@ spec:
 
 ---
 
-## Pod 2: Volume Mount (Nginx)
+## Volume-based Pod
 
 ```
 apiVersion: v1
@@ -128,34 +139,36 @@ spec:
 kubectl exec nginx-config-pod -- curl -s http://localhost/health
 ```
 
+✔️ Response: **healthy**
+
+---
+
+# 🔐 Task 4: Secret (YAML)
+
+## Secret YAML: `db-secret.yaml`
+
+```
+apiVersion: v1
+kind: Secret
+metadata:
+  name: db-credentials
+type: Opaque
+data:
+  DB_USER: YWRtaW4=              # base64(admin)
+  DB_PASSWORD: czNjdXJlUEBzc3cwcmQ=   # base64(s3cureP@ssw0rd)
+```
+
+---
+
+## Apply
+
+```
+kubectl apply -f db-secret.yaml
+```
+
 ---
 
 ## Verification
-
-✔️ `/health` endpoint returns **healthy**
-
----
-
-## Key Insight
-
-* env → simple key-values
-* volume → full config files
-
----
-
-# 🔐 Task 4: Create a Secret
-
-## Create Secret
-
-```
-kubectl create secret generic db-credentials \
-  --from-literal=DB_USER=admin \
-  --from-literal=DB_PASSWORD=s3cureP@ssw0rd
-```
-
----
-
-## Inspect
 
 ```
 kubectl get secret db-credentials -o yaml
@@ -163,34 +176,24 @@ kubectl get secret db-credentials -o yaml
 
 ---
 
-## Decode
+## Decode Example
 
 ```
-echo '<base64-value>' | base64 --decode
+echo 'czNjdXJlUEBzc3cwcmQ=' | base64 --decode
 ```
 
----
-
-## Verification
-
-✔️ Values decoded successfully
+✔️ Output: `s3cureP@ssw0rd`
 
 ---
 
-## Important Insight
+## Insight
 
-* Base64 ≠ Encryption
-* Security comes from:
-
-  * RBAC
-  * Access control
-  * Encryption at rest (optional)
+* Base64 = encoding, NOT encryption
+* Security relies on access control (RBAC)
 
 ---
 
-# 🔑 Task 5: Use Secrets in Pod
-
-## Manifest
+# 🔑 Task 5: Use Secret in Pod
 
 ```
 apiVersion: v1
@@ -223,18 +226,15 @@ spec:
 ## Verification
 
 ✔️ Env variable injected
-✔️ Secret mounted as files
+✔️ Files mounted in `/etc/db-credentials`
+
+### Important
+
+* Mounted values are **plaintext**, not base64
 
 ---
 
-## Key Insight
-
-* Mounted files contain **plaintext values**
-* Not base64 encoded
-
----
-
-# 🔄 Task 6: Live Config Updates
+# 🔄 Task 6: Live Config Update
 
 ## Create ConfigMap
 
@@ -279,26 +279,21 @@ kubectl patch configmap live-config \
 
 ## Verification
 
-✔️ File updated automatically (after ~30s)
-✔️ No pod restart needed
+✔️ Value updated automatically (no restart)
 
 ---
 
-## Critical Insight
+## Key Insight
 
-* Volume mounts → dynamic updates
-* Env variables → static (require restart)
+* Volume mount → dynamic update
+* Env variables → static
 
 ---
 
 # 🧹 Task 7: Cleanup
 
 ```
-kubectl delete pod configmap-env-pod
-kubectl delete pod nginx-config-pod
-kubectl delete pod secret-pod
-kubectl delete pod live-config-pod
-
+kubectl delete pod configmap-env-pod nginx-config-pod secret-pod live-config-pod
 kubectl delete configmap app-config nginx-config live-config
 kubectl delete secret db-credentials
 ```
@@ -307,21 +302,19 @@ kubectl delete secret db-credentials
 
 # 📌 Key Takeaways
 
-* ConfigMaps separate configuration from images
-* Secrets handle sensitive data securely (relatively)
-* Volume mounts enable dynamic updates
-* Environment variables are static after startup
-* Base64 encoding is NOT security
+* ConfigMaps externalize configuration
+* Secrets manage sensitive data
+* Volume mounts enable real-time updates
+* Env variables are fixed at startup
+* Base64 is not security
 
 ---
 
 # 🧩 Conclusion
 
-Today I learned how Kubernetes manages configuration:
+This was a critical step toward **production-ready systems**:
 
-Hardcoded configs ❌
-Dynamic, externalized configs ✅
+Config is no longer baked into images —
+it is **dynamic, decoupled, and environment-aware**.
 
-This is critical for building **scalable, secure, and maintainable systems**.
 
----
