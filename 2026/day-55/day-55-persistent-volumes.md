@@ -46,6 +46,7 @@ spec:
 ```
 kubectl exec ephemeral-pod -- cat /data/message.txt
 ```
+<img width="844" height="49" alt="image" src="https://github.com/user-attachments/assets/00c20ff5-369c-4007-9095-ac7f8c5b6fff" />
 
 ---
 
@@ -84,6 +85,7 @@ spec:
   accessModes:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
+  storageClassName: ""
   hostPath:
     path: /tmp/k8s-pv-data
 ```
@@ -96,6 +98,7 @@ spec:
 kubectl apply -f pv.yaml
 kubectl get pv
 ```
+<img width="1119" height="112" alt="image" src="https://github.com/user-attachments/assets/cab2ecdc-65db-4ff3-85e4-589a716f0113" />
 
 ---
 
@@ -117,6 +120,7 @@ metadata:
 spec:
   accessModes:
     - ReadWriteOnce
+  storageClassName: ""
   resources:
     requests:
       storage: 500Mi
@@ -131,6 +135,7 @@ kubectl apply -f pvc.yaml
 kubectl get pvc
 kubectl get pv
 ```
+<img width="1129" height="114" alt="image" src="https://github.com/user-attachments/assets/f3d74a62-aafe-4335-850d-98bb799d30f5" />
 
 ---
 
@@ -173,6 +178,7 @@ spec:
 ```
 kubectl exec persistent-pod -- cat /data/message.txt
 ```
+<img width="854" height="49" alt="image" src="https://github.com/user-attachments/assets/e7c0d5bf-e796-43bf-8515-23e620b16b16" />
 
 ---
 
@@ -183,7 +189,16 @@ kubectl delete pod persistent-pod
 kubectl apply -f persistent-pod.yaml
 kubectl exec persistent-pod -- cat /data/message.txt
 ```
+<img width="849" height="294" alt="image" src="https://github.com/user-attachments/assets/a6471cfc-2a03-4f25-88b5-64d7583b639f" />
 
+Why the timestamp changed
+The new pod ran its init/command again and overwrote message.txt with the current time. The persistence is working — the file survived pod deletion, it just got overwritten on restart.
+If you want to prove the old data survives without overwriting, you could:
+```
+kubectl exec persistent-pod -- ls -la /data/
+
+```
+Or append instead of overwrite in your pod command (>> instead of >).
 ---
 
 ## Verification
@@ -202,6 +217,7 @@ kubectl exec persistent-pod -- cat /data/message.txt
 kubectl get storageclass
 kubectl describe storageclass
 ```
+<img width="1192" height="281" alt="image" src="https://github.com/user-attachments/assets/8bd679c9-89b2-4e56-bc7e-b6a033ef396f" />
 
 ---
 
@@ -252,6 +268,39 @@ kubectl apply -f dynamic-pvc.yaml
 kubectl get pvc
 kubectl get pv
 ```
+<img width="1122" height="104" alt="image" src="https://github.com/user-attachments/assets/31c21668-636b-4f45-b1f3-81a87c863516" />
+
+Why dynamic-pvc is Pending
+standard StorageClass exists ✅, but its binding mode is WaitForFirstConsumer — meaning it won't create the PV until a Pod actually requests it.
+It's waiting for a pod to use the PVC before provisioning storage.
+## Create a pod that uses dynamic-pvc
+```
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dynamic-pod
+spec:
+  containers:
+  - name: app
+    image: busybox
+    command: ["sh", "-c", "echo Dynamic PV Works > /data/message.txt && sleep 3600"]
+    volumeMounts:
+    - mountPath: /data
+      name: dynamic-storage
+  volumes:
+  - name: dynamic-storage
+    persistentVolumeClaim:
+      claimName: dynamic-pvc
+
+```
+## Apply
+
+```
+kubectl apply -f dynamic-pod.yaml
+kubectl get pvc
+kubectl get pv
+```
+<img width="1190" height="278" alt="image" src="https://github.com/user-attachments/assets/6dda52f2-186b-4f45-9ca6-e2912b8a9626" />
 
 ---
 
@@ -321,4 +370,3 @@ This is the foundation for running:
 * Logs
 * Persistent applications
 
----
