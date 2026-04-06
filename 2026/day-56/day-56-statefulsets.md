@@ -65,6 +65,7 @@ spec:
 kubectl apply -f headless-service.yaml
 kubectl get svc
 ```
+<img width="1125" height="126" alt="image" src="https://github.com/user-attachments/assets/16f8de4f-03d8-4651-87b0-ee06ca577b83" />
 
 ---
 
@@ -120,6 +121,7 @@ spec:
 kubectl apply -f statefulset.yaml
 kubectl get pods -l app=web -w
 ```
+<img width="1196" height="317" alt="image" src="https://github.com/user-attachments/assets/e3ba466b-3d2b-4ab3-a0c2-47d117574eab" />
 
 ---
 
@@ -158,6 +160,7 @@ nslookup web-0.web.default.svc.cluster.local
 nslookup web-1.web.default.svc.cluster.local
 nslookup web-2.web.default.svc.cluster.local
 ```
+<img width="1212" height="411" alt="image" src="https://github.com/user-attachments/assets/bcff77b1-814b-46f9-ab22-9db1dcfacd45" />
 
 ---
 
@@ -191,6 +194,7 @@ kubectl delete pod web-0
 ```
 kubectl exec web-0 -- cat /usr/share/nginx/html/index.html
 ```
+<img width="1206" height="181" alt="image" src="https://github.com/user-attachments/assets/e04f6498-dc02-4814-9af7-fe88e386bc28" />
 
 ---
 
