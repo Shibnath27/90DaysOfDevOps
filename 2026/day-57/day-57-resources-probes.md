@@ -44,6 +44,7 @@ spec:
 kubectl apply -f resource-pod.yaml
 kubectl describe pod resource-pod
 ```
+<img width="1195" height="613" alt="image" src="https://github.com/user-attachments/assets/3ebf28cf-ba7f-4ac7-8079-6e0e4d2af287" />
 
 ---
 
@@ -88,6 +89,7 @@ spec:
 kubectl apply -f stress-pod.yaml
 kubectl describe pod stress-pod
 ```
+<img width="1200" height="614" alt="image" src="https://github.com/user-attachments/assets/5827245b-6736-4f6a-a14e-75b097d91357" />
 
 ---
 
@@ -128,6 +130,7 @@ spec:
 kubectl apply -f huge-request-pod.yaml
 kubectl describe pod huge-request-pod
 ```
+<img width="1199" height="609" alt="image" src="https://github.com/user-attachments/assets/e0c5a0f9-3768-4f64-a37c-817fa5a68e2f" />
 
 ---
 
@@ -176,6 +179,7 @@ spec:
 ```
 kubectl get pod liveness-pod -w
 ```
+<img width="801" height="132" alt="image" src="https://github.com/user-attachments/assets/67ed3333-722d-4d42-82ba-d655bfd3ac43" />
 
 ---
 
@@ -197,6 +201,8 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: readiness-pod
+  labels:
+    app: readiness-app
 spec:
   containers:
   - name: nginx
