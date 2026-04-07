@@ -27,6 +27,7 @@ chmod 700 get_helm.sh
 helm version
 helm env
 ```
+<img width="1188" height="558" alt="image" src="https://github.com/user-attachments/assets/e6980477-011d-4548-b1db-13f2a04d1a2e" />
 
 ---
 
@@ -84,6 +85,7 @@ helm list
 helm status my-nginx
 helm get manifest my-nginx
 ```
+<img width="1210" height="240" alt="image" src="https://github.com/user-attachments/assets/8954f253-f08c-457b-98d1-72781f83dbc9" />
 
 ---
 
@@ -156,6 +158,7 @@ helm get values nginx-values
 kubectl get pods
 kubectl get svc
 ```
+<img width="775" height="303" alt="image" src="https://github.com/user-attachments/assets/88d497a1-26b1-4da4-afd8-fe9cb778b253" />
 
 ---
 
@@ -188,6 +191,7 @@ helm history my-nginx
 ```
 helm rollback my-nginx 1
 ```
+<img width="725" height="303" alt="image" src="https://github.com/user-attachments/assets/c98b87f2-5e90-4c58-ada8-76ef42c97d7e" />
 
 ---
 
@@ -246,15 +250,16 @@ helm template my-release ./my-app
 ## Install
 
 ```
-helm install my-release ./my-app
+helm install my-release ./my-app --namespace my-app --create-namespace
 ```
+<img width="1199" height="318" alt="image" src="https://github.com/user-attachments/assets/196b37db-55de-4e0f-a131-9c22d06e35ab" />
 
 ---
 
 ## Upgrade
 
 ```
-helm upgrade my-release ./my-app --set replicaCount=5
+helm upgrade my-release ./my-app --set replicaCount=5 -n my-app
 ```
 
 ---
