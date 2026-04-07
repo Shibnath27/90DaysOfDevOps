@@ -54,6 +54,7 @@ kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/late
 kubectl top nodes
 kubectl top pods -A
 ```
+<img width="1192" height="389" alt="image" src="https://github.com/user-attachments/assets/13cbfe1c-e196-449c-889f-f22cd0e1d43b" />
 
 ---
 
@@ -74,6 +75,7 @@ kubectl top nodes
 kubectl top pods -A
 kubectl top pods -A --sort-by=cpu
 ```
+<img width="1158" height="309" alt="image" src="https://github.com/user-attachments/assets/671b550b-2355-4778-b698-017539612dd1" />
 
 ---
 
@@ -154,6 +156,7 @@ kubectl autoscale deployment php-apache \
 kubectl get hpa
 kubectl describe hpa php-apache
 ```
+<img width="1190" height="368" alt="image" src="https://github.com/user-attachments/assets/82597dfc-14d9-4fb1-a295-9c59fade72b3" />
 
 ---
 
@@ -187,6 +190,7 @@ kubectl run load-generator \
 ```
 kubectl get hpa php-apache --watch
 ```
+<img width="1122" height="143" alt="image" src="https://github.com/user-attachments/assets/abdda520-b9b6-439f-b15e-313dbe01a565" />
 
 ---
 
@@ -258,6 +262,7 @@ spec:
 kubectl apply -f hpa.yaml
 kubectl describe hpa php-apache
 ```
+<img width="1199" height="606" alt="image" src="https://github.com/user-attachments/assets/d1501127-277b-42c0-9b0c-f4df43933a23" />
 
 ---
 
@@ -267,6 +272,7 @@ kubectl describe hpa php-apache
 
 * Scale-up speed (fast reaction)
 * Scale-down delay (avoid flapping)
+<img width="754" height="586" alt="image" src="https://github.com/user-attachments/assets/c3564ea7-34a1-44c3-8075-a7d5c7cf37bc" />
 
 ---
 
