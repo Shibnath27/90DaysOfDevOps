@@ -52,6 +52,18 @@ Instead of clicking in the AWS console, I define infrastructure (servers, networ
 ### 🔹 Terraform Installation
 
 ```bash
+# macOS
+brew tap hashicorp/tap
+brew install hashicorp/tap/terraform
+
+# Linux (amd64)
+wget -O - https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+sudo apt update && sudo apt install terraform
+
+# Windows
+choco install terraform
+# verify
 terraform -version
 ```
 
@@ -67,7 +79,12 @@ aws sts get-caller-identity
 ---
 
 ## 🪣 Task 3: Create an S3 Bucket
+Create a project directory and write your first Terraform config:
 
+```bash
+mkdir terraform-basics && cd terraform-basics
+
+```
 ### 🔹 main.tf
 
 ```hcl
@@ -144,7 +161,8 @@ Terraform only created the EC2 instance because:
 ---
 
 ## 📂 Task 5: Terraform State
-
+1. Open terraform.tfstate in your editor -- read the JSON structure
+2. Run these commands and document what each returns:
 ### 🔹 Commands
 
 ```bash
